@@ -2,13 +2,15 @@
 
 # a function that prints a string in uppercase followed by a new line.
 
-def uppercase(str):
-    for i in range(len(str)):
-        char = ord(str[i])
-        if char >= 97 and char <= 122:
-            char = char - 32
-        print("{}".format(chr(char)), end="")
-    print()
+def uppercase(input_str):
+    result_str = ""
+
+    for c in input_str:
+        if 97 <= ord(c) <= 122:
+            c = chr(ord(c) - 32)
+        result_str += c
+
+    print("{}".format(result_str))
 
 
 '''
