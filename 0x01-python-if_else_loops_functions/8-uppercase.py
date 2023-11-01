@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
-# a function that prints a string in uppercase followed by a new line.
+def islower(c):
+    if ord(c) >= 97 and ord(c) <= 122:
+        return (True)
+    else:
+        return (False)
 
 
 def uppercase(str):
     for c in str:
-        if ord(c) >= 97 and ord(c) <= 122:
-            c = chr(ord(c) - 32)
-        print("{}" .format(ord(c)), end="")
+        print("{:c}"
+              .format(ord(c) if not islower(c) else ord(c) - 32), end="")
     print("")
